@@ -59,8 +59,8 @@ const config = {
             loader: 'file-loader',
             options: {
               name: "[name].[ext]", 
-              outputPath: "images",//打包后dist文件夹下将创建的文件目录
-              publicPath: "./imgs", //打包后，build目录下，index.html中img src该访问的路径
+              outputPath: "assets",//打包后dist文件夹下将创建的文件目录
+              publicPath: "./assets", //打包后，build目录下，index.html中img src该访问的路径
             }
         }
       }

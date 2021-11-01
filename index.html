@@ -19,7 +19,7 @@
                       页面标题
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                      <input type="text" name="company-website" id="title" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none sm:text-sm border-gray-300" placeholder="页面标签的名称">
+                      <input type="text" required="required" name="company-website" id="title" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none sm:text-sm border-gray-300" placeholder="页面标签的名称">
                     </div>
                   </div>
                 </div>
@@ -33,7 +33,7 @@
                       <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                         https://game.qq.com/
                       </span>
-                      <input type="text" name="company-website" id="url-name" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none sm:text-sm border-gray-300" placeholder="页面英文名">
+                      <input type="text" name="company-website" required="required" id="url-name" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none sm:text-sm border-gray-300" placeholder="页面英文名">
                       <span class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
                         .shtml
                       </span>
@@ -53,7 +53,7 @@
                       <div class="flex text-sm text-gray-600">
                         <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                           <span>点击上传</span>
-                          <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                          <input required="required" id="file-upload" name="file-upload" type="file" class="sr-only">
                         </label>
                         <p class="pl-1">或拖拽</p>
                       </div>
@@ -90,7 +90,7 @@
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                       文档中的“1. ” “1.13"项目编号需要替换成文字
-                      <img src="./src/assets/images/wrong_1.png" alt="">
+                      <img src="./src/assets/images/wrong_1.png" class="" alt="">
                       <img src="./src/assets/images/right_1.png" alt="">
                     </dd>
                   </div>
@@ -104,18 +104,10 @@
                   </div>
                   <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium text-gray-500">
-                      页面中的一级小标题使用样式3
+                      页面中的一级和二级标题使用样式3
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“1. ”
-                    </dd>
-                  </div>
-                  <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                    <dt class="text-sm font-medium text-gray-500">
-                      文档中的二级小标题使用样式4
-                    </dt>
-                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“1.2 ”
+                      例如：“1. 或 1.2 ”
                     </dd>
                   </div>
                   <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -124,6 +116,22 @@
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                       例如：“1) ”
+                    </dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                      文档末尾的落款使用样式"author"
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      例如：“深圳市腾讯计算机系统有限公司”
+                    </dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                      常见问题：1：文档中有"?"
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      通常是docx内有无法识别的空格导致
                     </dd>
                   </div>
                   <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -143,7 +151,7 @@
                             </span>
                           </div>
                           <div class="ml-4 flex-shrink-0">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                            <a href="src/assets/docx/腾讯游戏隐私保护指引.docx" class="font-medium text-indigo-600 hover:text-indigo-500">
                               Download
                             </a>
                           </div>
