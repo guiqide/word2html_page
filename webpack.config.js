@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -10,7 +11,7 @@ const stylesHandler = 'style-loader';
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
   },
   devServer: {
     open: true,
@@ -19,6 +20,12 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "docx", to: "./docx" },
+        { from: "pages", to: "./" },
+      ],
     }),
   ],
   module: {
@@ -49,10 +56,6 @@ const config = {
           },
         ],
       },
-      // {
-      //   test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-      //   type: 'asset',
-      // },
       {
           test: /\.(png|jpg|gif)$/,
           use: {

@@ -55,7 +55,7 @@
                           <span>点击上传</span>
                           <input required="required" id="file-upload" name="file-upload" type="file" class="sr-only">
                         </label>
-                        <p class="pl-1">或拖拽</p>
+                        <!-- <p class="pl-1">或拖拽</p> -->
                       </div>
                       <p class="text-xs text-gray-500">
                         <div class=""></div>.docx 10MB
@@ -89,9 +89,11 @@
                       替换项目列表
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      文档中的“1. ” “1.13"项目编号需要替换成文字
-                      <img src="./src/assets/images/wrong_1.png" class="" alt="">
-                      <img src="./src/assets/images/right_1.png" alt="">
+                      <span class="font-bold">文档中的“1. ” “1.13"项目编号需要替换成文字</span>
+                      <div class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/wrong_1.png" class="" alt="">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/right_1.png" alt="">
+                      </div>
                     </dd>
                   </div>
                   <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -99,7 +101,10 @@
                       页面标题可以使用word中的样式2
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“儿童隐私保护指引”
+                      <span class="font-bold">例如：“儿童隐私保护指引”</span>
+                      <div class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/right_2.png" alt="">
+                      </div>
                     </dd>
                   </div>
                   <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -107,23 +112,31 @@
                       页面中的一级和二级标题使用样式3
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“1. 或 1.2 ”
+                      <span class="font-bold">例如：“1. 或 1.2 ”</span>
+                      <div class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/right_3.png" alt="">
+                      </div>
                     </dd>
                   </div>
-                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                  <!-- <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium text-gray-500">
                       文档中的三级小标题使用样式"sub"
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“1) ”
+                      <span class="font-bold">例如：“1) ”</span>
+                      
                     </dd>
-                  </div>
+                  </div> -->
                   <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium text-gray-500">
                       文档末尾的落款使用样式"author"
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      例如：“深圳市腾讯计算机系统有限公司”
+                      <span class="font-bold">例如：“深圳市腾讯计算机系统有限公司”</span>
+                      <div class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/right_5_1.png" alt="">
+                        <img class="pl-3 pr-4 py-3" src="./src/assets/images/right_5_2.png" alt="">
+                      </div>
                     </dd>
                   </div>
                   <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -151,12 +164,20 @@
                             </span>
                           </div>
                           <div class="ml-4 flex-shrink-0">
-                            <a href="src/assets/docx/腾讯游戏隐私保护指引.docx" class="font-medium text-indigo-600 hover:text-indigo-500">
+                            <a href="./docx/腾讯游戏隐私保护指引.docx" class="font-medium text-indigo-600 hover:text-indigo-500">
                               Download
                             </a>
                           </div>
                         </li>
                       </ul>
+                    </dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">
+                      原理说明
+                    </dt>
+                    <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                      转换并不是完全根据在word中看到的样式，而是根据字体使用的word样式名，样式名 -> 页面样式类型。
                     </dd>
                   </div>
                 </dl>
