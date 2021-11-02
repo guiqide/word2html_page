@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -26,6 +27,7 @@ const config = {
         { from: "docx", to: "./docx" },
       ],
     }),
+    new MiniCssExtractPlugin()
   ],
   module: {
     rules: [
@@ -41,9 +43,7 @@ const config = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'style-loader',
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
