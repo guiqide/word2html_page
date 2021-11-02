@@ -24,7 +24,6 @@ const config = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "docx", to: "./docx" },
-        { from: "pages", to: "./" },
       ],
     }),
   ],
