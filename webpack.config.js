@@ -21,6 +21,9 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',
+      minify: {
+        removeRedundantAttributes: false,
+      }
     }),
     new CopyWebpackPlugin({
       patterns: [
