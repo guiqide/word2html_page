@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
+# 发布方法
 
-This project has been created using **webpack-cli**, you can now run
+1. 修改代码
 
-```
-npm run build
-```
+2. 执行`npm run build:dev`
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+3. push master分支
