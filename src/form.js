@@ -46,6 +46,9 @@ const fileChangeHandler = (event) => {
 		mammoth.convertToHtml({arrayBuffer: arrayBuffer}, options)
 				.then(displayResult)
 				.done();
+
+		// 清空input数据，否则change只触发一次
+		event.target.value = null
 	});
 }
 
