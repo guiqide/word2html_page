@@ -48,7 +48,7 @@ const fileChangeHandler = (event) => {
 				.done();
 
 		// 清空input数据，否则change只触发一次
-		event.target.value = null
+		// event.target.value = null
 	});
 }
 
