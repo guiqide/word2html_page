@@ -94,10 +94,6 @@
         color: #444;
         background-color: #f1f1f1;
         font-family: Verdana, 微软雅黑;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select: none;
       }
       .wrap {
         background: #f1f1f1
