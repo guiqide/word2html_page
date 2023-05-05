@@ -20,7 +20,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.4",
     "lodash": "^4.17.21",
-    "mammoth": "^1.4.19"
+    "mammoth": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
