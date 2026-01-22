@@ -15,7 +15,7 @@ import mammoth
 from pathlib import Path
 
 
-def convert_docx_to_html(input_file, output_file=None, custom_styles=None):
+def convert_docx_to_html(input_file, output_file=None, custom_styles=None, lang='zh-CN'):
     """
     将.docx文件转换为HTML格式
     Convert .docx file to HTML format
@@ -24,6 +24,7 @@ def convert_docx_to_html(input_file, output_file=None, custom_styles=None):
         input_file (str): 输入的.docx文件路径 / Path to input .docx file
         output_file (str): 输出的HTML文件路径（可选）/ Path to output HTML file (optional)
         custom_styles (dict): 自定义样式映射（可选）/ Custom style mapping (optional)
+        lang (str): HTML语言设置（默认：zh-CN）/ HTML language setting (default: zh-CN)
     
     Returns:
         tuple: (html内容, 消息列表) / (HTML content, list of messages)
@@ -33,7 +34,7 @@ def convert_docx_to_html(input_file, output_file=None, custom_styles=None):
     if not input_path.exists():
         raise FileNotFoundError(f"文件不存在 / File not found: {input_file}")
     
-    if not input_path.suffix.lower() in ['.docx']:
+    if input_path.suffix.lower() != '.docx':
         raise ValueError(f"仅支持.docx格式 / Only .docx format is supported: {input_file}")
     
     # 如果没有指定输出文件，使用同名的.html文件
@@ -58,7 +59,7 @@ def convert_docx_to_html(input_file, output_file=None, custom_styles=None):
     # 创建完整的HTML页面
     # Create complete HTML page
     html_content = f"""<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
